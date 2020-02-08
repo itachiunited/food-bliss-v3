@@ -1,0 +1,41 @@
+entity User
+{
+	id String required,
+    login String required,
+    phoneNumber String,
+    firstName String,
+    lastName String,
+    status Status
+}
+
+entity Business
+{
+	id String required,
+    businessType BusinessType,
+    name String required,
+    location Location
+}
+
+entity Location {
+	id String required,
+    addressLine1 String required,
+    addressLine2 String,
+    city String required,
+    state String required,
+    zip String required,
+    country String required,
+    latitude String,
+    longitue String
+}
+
+enum Status {
+	PENDING, CONFIRMED, DENIED
+}
+
+enum BusinessType {
+	RESTAURANT, OTHER
+}
+
+relationship OneToOne {
+	Business{location} to Location
+}
