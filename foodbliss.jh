@@ -1,4 +1,4 @@
-entity User
+entity Customer
 {
 	id String required,
     login String required,
