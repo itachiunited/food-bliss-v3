@@ -3,8 +3,7 @@
     "fields": [
         {
             "fieldName": "type",
-            "fieldType": "Type",
-            "fieldValues": "RESTAURANT,COFFEE,BRUNCH,BREAKFAST,OTHER"
+            "fieldType": "String"
         },
         {
             "fieldName": "name",
