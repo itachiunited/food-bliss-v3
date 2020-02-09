@@ -8,10 +8,10 @@ entity Customer
     status Status
 }
 
-entity Business
+entity Store
 {
 	id String required,
-    businessType BusinessType,
+    type Type,
     name String required,
     location Location
 }
@@ -28,14 +28,14 @@ entity Location {
     longitue String
 }
 
+enum Type {
+	RESTAURANT, COFFEE, BRUNCH, BREAKFAST, OTHER
+}
+
 enum Status {
 	PENDING, CONFIRMED, DENIED
 }
 
-enum BusinessType {
-	RESTAURANT, OTHER
-}
-
 relationship OneToOne {
-	Business{location} to Location
+	Store{location} to Location
 }
